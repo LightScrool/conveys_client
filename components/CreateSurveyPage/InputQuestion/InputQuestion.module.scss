@@ -1,0 +1,77 @@
+@import "styles/variables";
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    font-size: 1.4rem;
+  }
+
+  &__xMark {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+.isNecessary {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__checkbox {
+    margin-right: 0.3rem;
+    width: 1rem;
+    height: 1rem;
+
+    cursor: pointer;
+  }
+}
+
+.type {
+  margin-top: 0.5rem;
+}
+
+.text {
+  margin-top: 0.5rem;
+}
+
+.variant {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &__input {
+    margin: 0.5rem 0.5rem 0 0;
+  }
+
+  &__xMark {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+  }
+}
+
+.variantsGeneral {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__otherVariant {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__checkbox {
+    margin-left: 0.3rem;
+    width: 1rem;
+    height: 1rem;
+
+    cursor: pointer;
+  }
+}
+

@@ -1,0 +1,28 @@
+@import "styles/variables";
+
+.input {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+
+  font-family: $font-main;
+  font-size: 1rem;
+  line-height: 1.1rem;
+  color: $color-black;
+
+  background-color: $color-gray-1;
+  resize: none;
+  border: 2px solid $color-gray-2;
+
+  /* Chrome, Safari, Edge, Opera */
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  &[type=number] {
+    -moz-appearance: textfield;
+  }
+}

@@ -1,0 +1,66 @@
+@import "styles/variables";
+
+.wrapper {
+  padding-top: 2rem;
+}
+
+.survey {
+  border: solid 2px $color-gray-2;
+  padding: 1rem;
+  margin-bottom: 1.3rem;
+
+  display: flex;
+  justify-content: space-between;
+
+  cursor: pointer;
+  position: relative;
+
+  // The "before" pseudo element is needed to working onClick on padding zone
+  &:before {
+    content: "";
+    display: block;
+    background-color: transparent;
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    left: 0;
+    top: 0;
+  }
+
+  &__content {
+    width: 85%;
+  }
+
+  &__title {
+    font-family: $font-main;
+    font-size: 1.6rem;
+    color: $color-black;
+  }
+
+  &__description {
+    margin-top: 0.5rem;
+
+    font-family: $font-main;
+    font-size: 1rem;
+    color: $color-gray-3;
+    line-height: 1.6;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__button {
+    margin: auto 0;
+  }
+
+  &__responsesQuantity {
+    font-family: $font-main;
+    font-size: 2rem;
+    color: $color-black;
+
+    margin: auto 1rem  auto 0;
+  }
+}

@@ -1,0 +1,29 @@
+@import "styles/variables";
+
+.AuthAccInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: $font-main;
+  font-size: 1.5rem;
+  color: $color-black;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: default;
+
+  position: relative;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+}
+
+.nickname {
+  margin-inline: 1.5rem 1rem;
+}
+
+.logout {
+  cursor: pointer;
+}

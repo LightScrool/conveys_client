@@ -1,0 +1,21 @@
+@import "styles/variables";
+
+.block {
+  display: block;
+  position: relative;
+
+  border: 2px solid $color-gray-2;
+  padding: 1rem;
+
+  font-family: $font-main;
+  color: $color-black;
+
+  & + & {
+    margin-top: 1.5rem;
+  }
+}
+
+.title {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}

@@ -1,0 +1,36 @@
+@import "styles/variables";
+
+.Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: $header-size;
+  width: 100%;
+
+  background-color: #fff;
+  border-bottom: 3px solid $color-main;
+  box-shadow: $shadow-block;
+}
+
+.inner {
+  height: 100%;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  align-content: center;
+
+  & > * {
+    justify-self: center;
+
+    &:first-child {
+      justify-self: start;
+    }
+
+    &:last-child {
+      justify-self: end;
+    }
+  }
+}

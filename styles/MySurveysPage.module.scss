@@ -1,0 +1,23 @@
+@import "styles/variables";
+
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 15rem;
+  transform: translateX(-50%);
+}
+
+.empty {
+  font-family: $font-main;
+  font-size: 2rem;
+  color: $color-black;
+
+  display: block;
+  margin: 15rem auto 6rem;
+  text-align: center;
+}
+
+.button {
+  display: block;
+  margin: 2rem auto 0;
+}

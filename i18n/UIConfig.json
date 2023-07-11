@@ -1,0 +1,74 @@
+{
+  "serviceName": "Conveys",
+  "pageNotFound": "Страница не найдена!",
+  "navigation": {
+    "main": "Пройти опрос",
+    "mySurveys": "Мои опросы"
+  },
+  "surveysList": {
+    "button": "Пройти"
+  },
+  "surveysPage": {
+    "empty": "Нет опросов доступных для прохождения!"
+  },
+  "mySurveysPage": {
+    "empty": "У вас пока нет опросов!"
+  },
+  "createButton": {
+    "text": "Создать опрос",
+    "notEnough": "У вас недостаточно баллов, пройдите больше опросов: "
+  },
+  "loginButton": "Войти",
+  "createSurvey": {
+    "name": "* Название",
+    "description": "Краткое описание",
+    "expirationTime": "Время окончания:",
+    "addButton": "Добавить вопрос",
+    "notValid": "Заполните все обязательные (*) поля!",
+    "questions": {
+      "title": "Вопрос №",
+      "isNecessary": "Обязательный",
+      "text": "* Текст вопроса",
+      "types": {
+        "text": "Текстовый",
+        "number": "Числовой",
+        "oneOfList": "Один из списка",
+        "fewOfList": "Несколько из списка"
+      },
+      "variant": {
+        "text": "* Вариант ",
+        "addButton": "Добавить вариант"
+      },
+      "otherVariant": "Вариант \"Другое...\""
+    }
+  },
+  "singleSurveyPage": {
+    "closed": "Опрос закрыт или вы его уже проходили",
+    "head": {
+      "responsesQuantity": "Количество ответов: ",
+      "expirationTime": "Опрос открыт до "
+    },
+    "alien": {
+      "answered": "Спасибо за ваш ответ!",
+      "inputText": "Ваш ответ...",
+      "inputNum": "Введите число...",
+      "submitButton": {
+        "text": "Отправить ответ"
+      },
+      "otherVariant": "Другое...",
+      "notValid": "Вы ответили не на все обязательные вопросы!"
+    },
+    "my": {
+      "delete": "Удалить опрос",
+      "confirm": "Вы уверены?",
+      "cancel": "Отмена",
+      "open": "Открыть опрос",
+      "close": "Закрыть опрос",
+      "download": "Скачать",
+      "questions": {
+        "title": "Вопрос №",
+        "answersTitle": "Ответы:"
+      }
+    }
+  }
+}

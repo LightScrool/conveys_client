@@ -1,0 +1,11 @@
+@import "styles/variables";
+
+.Logo {
+  font-size: 3.5rem;
+  font-family: $font-cursive;
+  color: $color-main;
+  text-decoration: none;
+
+  cursor: pointer;
+  @include scale-on-hover(1.05);
+}

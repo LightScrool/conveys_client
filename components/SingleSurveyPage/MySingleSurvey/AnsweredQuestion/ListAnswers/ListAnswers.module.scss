@@ -1,0 +1,9 @@
+@import "styles/variables";
+
+.answer {
+  & + & {
+    padding-top: 0.6rem;
+    margin-top: 0.6rem;
+    border-top: 2px solid $color-gray-1;
+  }
+}

@@ -1,0 +1,29 @@
+@import "styles/variables";
+
+.description,
+.name {
+  margin-bottom: 0.8rem;
+}
+
+.time {
+  margin-top: -0.2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  &__text {
+    font-family: $font-main;
+    font-size: 1.2rem;
+    line-height: 1.1rem;
+    color: $color-black;
+
+    width: 15rem;
+  }
+
+  &__input {
+    width: content-box;
+  }
+}
+

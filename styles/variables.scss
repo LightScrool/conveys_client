@@ -1,0 +1,46 @@
+// Fonts
+$font-main: 'Roboto Slab', serif;
+$font-cursive: 'Allura', cursive;
+
+// Sizes
+$header-size: 6rem;
+$container-width: 80rem;
+
+// Colors
+$color-main: #00BFFF;
+$color-black: #333333;
+$color-gray-3: #777777;
+$color-gray-2: #BBB;
+$color-gray-1: #EEE;
+$color-red: #E22;
+
+// Patterns
+$shadow-block: 0 5px 10px rgba(0, 0, 0, 0.15);
+
+// Timing
+$time-fast: 0.1s;
+$time-standard: 0.3s;
+$time-slow: 1.2s;
+
+// Mixins
+@mixin scale-on-hover($scale-ratio) {
+  @media (hover: hover) {
+    will-change: transform;
+    transform-origin: center center;
+    transition: transform $time-standard;
+    transform: scale(1);
+    &:hover {
+      transform: scale($scale-ratio);
+    }
+  }
+}
+
+@mixin line($width, $height, $color, $mt: 0) {
+  display: block;
+  content: "";
+  width: $width;
+  height: $height;
+  border-radius: $height;
+  background-color: $color;
+  margin-top: $mt;
+}

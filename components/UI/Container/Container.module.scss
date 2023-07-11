@@ -1,0 +1,11 @@
+@import "styles/variables";
+
+.Container {
+  display: block;
+  height: 100%;
+  width: 100%;
+  max-width: $container-width;
+  margin: auto;
+  padding: 0 1rem;
+  position: relative;
+}
