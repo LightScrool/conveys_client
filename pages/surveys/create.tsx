@@ -25,6 +25,8 @@ import { GeneralInputs } from "../../components/CreateSurveyPage/GeneralInputs/G
 import { InputQuestion } from "../../components/CreateSurveyPage/InputQuestion/InputQuestion";
 import Button from "../../components/UI/Button/Button";
 import { CreateSurveyButton } from "../../components/CreateSurveyButton/CreateSurveyButton";
+import { usePageYM } from "../../hooks/usePageYM";
+import { sendReachGoal } from "../../api/ym";
 
 const FieldArray = BadTypeFieldArray as FC<FieldArrayConfig>;
 
@@ -44,6 +46,8 @@ const getInitialValues = (): TValues => ({
 });
 
 const CreateSurveyPage = () => {
+  usePageYM();
+
   useOnlyAuth();
 
   const { t } = useTranslation();
@@ -87,6 +91,7 @@ const CreateSurveyPage = () => {
         alert("Ошибка!");
       })
       .finally(() => {
+        sendReachGoal("surveyCreated");
         setIsLoading(false);
       });
   };

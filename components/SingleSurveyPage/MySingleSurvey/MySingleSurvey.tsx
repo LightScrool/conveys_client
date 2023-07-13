@@ -8,6 +8,7 @@ import styles from "./MySingleSurvey.module.scss";
 import { useBackend } from "../../../hooks/useBackend";
 import { Popup } from "../../Popup/Popup";
 import { useRouter } from "next/router";
+import { sendReachGoal } from "../../../api/ym";
 
 interface IMySingleSurveyPageProps {
   data: TUserSurvey;
@@ -21,25 +22,35 @@ export const MySingleSurvey: FC<IMySingleSurveyPageProps> = ({ data }) => {
 
   const handleOpenSurvey = async () => {
     await openSurvey(data.id);
+    sendReachGoal("surveyOpened");
     window.location.reload();
   };
 
   const handleCloseSurvey = async () => {
     await closeSurvey(data.id);
+    sendReachGoal("surveyClosed");
     window.location.reload();
   };
 
   const handleDeleteSurvey = async () => {
     await deleteSurvey(data.id);
+    sendReachGoal("surveyDeleted");
     router.push("/my-surveys");
   };
 
-  const download = (getUrl: () => Promise<string>) => async () => {
+  const download = async (getUrl: () => Promise<string>) => {
     const url = await getUrl();
     window.open(url, "_blank");
   };
-  const downloadXlsx = download(() => getSurveyXlsx(data.id));
-  const downloadCsv = download(() => getSurveyCsv(data.id));
+  const downloadXlsx = async () => {
+    sendReachGoal("reportDownloadXLSX");
+    await download(() => getSurveyXlsx(data.id));
+  };
+
+  const downloadCsv = async () => {
+    sendReachGoal("reportDownloadCSV");
+    await download(() => getSurveyCsv(data.id));
+  };
 
   const [isDelPopupActive, setIsDelPopupActive] = useState<boolean>(false);
   const openDelPopup = () => setIsDelPopupActive(true);

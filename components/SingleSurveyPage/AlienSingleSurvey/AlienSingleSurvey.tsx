@@ -15,6 +15,7 @@ import {
   addAnsweredSurvey,
   getAnsweredSurveys,
 } from "../../../utils/answeredSurveys";
+import {sendReachGoal} from "../../../api/ym";
 
 interface IAlienSingleSurveyPageProps {
   surveyId: number;
@@ -71,6 +72,7 @@ export const AlienSingleSurvey: FC<IAlienSingleSurveyPageProps> = ({
     await responseSurvey(surveyId, values);
     setIsLoading(false);
     setIsAnswered(true);
+    sendReachGoal("surveyAnswered");
 
     if (isAuth) {
       loadUserInfo(getUserInfo);

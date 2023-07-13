@@ -9,6 +9,7 @@ import Container from "../../components/UI/Container/Container";
 import { useRouter } from "next/router";
 import {MySingleSurvey} from "../../components/SingleSurveyPage/MySingleSurvey/MySingleSurvey";
 import {AlienSingleSurvey} from "../../components/SingleSurveyPage/AlienSingleSurvey/AlienSingleSurvey";
+import {usePageYM} from "../../hooks/usePageYM";
 
 const checkIsUserSurvey = (
   survey: TSurvey | TUserSurvey,
@@ -26,6 +27,8 @@ export const getServerSideProps = async (context) => {
 };
 
 const SingleSurveyPage = ({ surveyId }) => {
+  usePageYM();
+
   const { t } = useTranslation();
 
   const { getSingleSurvey } = useBackend();

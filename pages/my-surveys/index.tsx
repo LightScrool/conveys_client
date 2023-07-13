@@ -10,8 +10,11 @@ import { SurveysList } from "../../components/SurveysList/SurveysList";
 import { CreateSurveyButton } from "../../components/CreateSurveyButton/CreateSurveyButton";
 import styles from "../../styles/MySurveysPage.module.scss";
 import { useRouter } from "next/router";
+import {usePageYM} from "../../hooks/usePageYM";
 
 const MySurveysPage = () => {
+  usePageYM();
+
   useOnlyAuth();
 
   const { t } = useTranslation();

@@ -12,8 +12,11 @@ import { Loader } from "../components/UI/Loader/Loader";
 import PagesList from "../components/PagesList/PagesList";
 import { SurveysList } from "../components/SurveysList/SurveysList";
 import styles from "../styles/SurveysPage.module.scss";
+import { usePageYM } from "../hooks/usePageYM";
 
 const SurveysPage = () => {
+  usePageYM();
+
   const { t } = useTranslation();
 
   const isAuth = useAppSelector(selectIsAuth);
