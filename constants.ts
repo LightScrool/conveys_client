@@ -7,7 +7,9 @@ export const NAVIGATION_REFS: typeof UIConfig.navigation = {
 
 export const YP_API_CLIENT_ID = process.env.YP_API_CLIENT_ID ?? '';
 
-export const YP_API_CLIENT_ID_AUTHORIZE_URL = `https://oauth.yandex.ru/authorize?response_type=token&client_id=${YP_API_CLIENT_ID}`;
+export const YP_API_REDIRECT_URI = process.env.YP_API_REDIRECT_URI ?? '';
+
+export const YP_API_CLIENT_ID_AUTHORIZE_URL = `https://oauth.yandex.ru/authorize?response_type=token&client_id=${YP_API_CLIENT_ID}&redirect_uri=${YP_API_REDIRECT_URI}`;
 
 export const CONVEYS_BACKEND_URL = process.env.CONVEYS_BACKEND_URL ?? '';
 
